@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 Route::get('/CalidadAire',[SitioController::class, 'index']);
 
-Route::get('/CalidadAire/Analisis',[SitioController::class, 'analisis']);
+Route::get('/CalidadAire/{idSistema}/Analisis',[SitioController::class, 'analisis']);
