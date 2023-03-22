@@ -8,12 +8,12 @@ class SitioController extends Controller
 {
     public function index()
 {
-    return 'Proyecto de calidad del aire';
+    return view('Sitio/blank');
 }   
 
 public function analisis (Request $request,$IdSistema)
 {
-    return $IdSistema;
+    return view('Sitio/blank',['idSistema'=>$IdSistema]);
 }    
 }
 
