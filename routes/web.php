@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/CalidadAire', function() {
+    return 'Proyecto de calidad del aire';
+});
+
+Route::get('/CalidadAire/Analisis', function() {
+    return 'Analisis de calidad del Aire';
+});
