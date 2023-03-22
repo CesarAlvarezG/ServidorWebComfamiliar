@@ -8,7 +8,7 @@ class SitioController extends Controller
 {
     public function index()
 {
-    echo "Proyecto de calidad del aire";
+    return 'Proyecto de calidad del aire';
 }    
 }
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/CalidadAire', function() {
-    return 'Proyecto de calidad del aire';
-});
+Route::get('/CalidadAire',[SitioController::class, 'index']);
 
-Route::get('/CalidadAire/Analisis', function() {
-    return 'Analisis de calidad del Aire';
-});
+Route::get('/CalidadAire/Analisis',[SitioController::class, 'analisis']);
