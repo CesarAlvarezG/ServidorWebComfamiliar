@@ -8,12 +8,12 @@ class SitioController extends Controller
 {
     public function index()
 {
-    return view('Sitio/blank');
+    return view('Sitio/AllSistems');
 }   
 
 public function analisis (Request $request,$IdSistema)
 {
-    return view('Sitio/blank',['idSistema'=>$IdSistema]);
+    return view('Sitio/OneSistem',['idSistema'=>$IdSistema]);
 }    
 }
 
