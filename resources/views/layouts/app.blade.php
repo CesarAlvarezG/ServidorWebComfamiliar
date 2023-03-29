@@ -2,7 +2,7 @@
 <html lang="en">
     <head>        
         <!-- META SECTION -->
-        <title>TITLE</title>            
+        <title>Calidad del Aire</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,7 +11,7 @@
         <!-- END META SECTION -->
         
         <!-- CSS INCLUDE -->        
-        <link rel="stylesheet" type="{{asset('text/css')}}" id="theme" href="{{asset('css/theme-default.css')}}"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-default.css')}}"/>
         <!-- EOF CSS INCLUDE -->
     </head>
     <body>
@@ -105,15 +105,15 @@
         <!-- END MESSAGE BOX-->
 
         <!-- START PRELOADS -->
-        <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
-        <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+        <audio id="audio-alert" src="{{asset('audio/alert.mp3')}}" preload="auto"></audio>
+        <audio id="audio-fail" src="{{asset('audio/fail.mp3')}}" preload="auto"></audio>
         <!-- END PRELOADS -->                 
         
     <!-- START SCRIPTS -->
         <!-- START PLUGINS -->
-        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/plugins/jquery/jquery-ui.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('js/plugins/bootstrap/bootstrap.min.js')}}"></script>        
         <!-- END PLUGINS -->
 
         <!-- THIS PAGE PLUGINS -->
@@ -121,8 +121,8 @@
         <!-- END PAGE PLUGINS -->         
 
         <!-- START TEMPLATE -->
-        <script type="text/javascript" src="js/plugins.js"></script>        
-        <script type="text/javascript" src="js/actions.js"></script>        
+        <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>        
+        <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>        
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->         
     </body>
