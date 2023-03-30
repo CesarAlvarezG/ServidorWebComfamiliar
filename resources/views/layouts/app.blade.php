@@ -13,6 +13,7 @@
         <!-- CSS INCLUDE -->        
         <link rel="stylesheet" type="text/css" id="theme" href="{{asset('css/theme-default.css')}}"/>
         <!-- EOF CSS INCLUDE -->
+        @yield('headspace')
     </head>
     <body>
         <!-- START PAGE CONTAINER -->
@@ -23,13 +24,15 @@
                 <!-- START X-NAVIGATION -->
                 <ul class="x-navigation">
                     <li class="xn-logo">
-                        <a href="https://gridgum.com">Varius</a>
+                        <a href="{{url('https://www.comfamiliar.com/')}}">Home</a>
                         <a href="#" class="x-navigation-control"></a>
-                    </li>                                                                      
-                    <li class="xn-title">Navigation</li>
+                    </li>                               
+                    @yield('userPresent')                                       
+                    <li class="xn-title">Navegación</li>
                     <li>
-                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+                        <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Barra de trabajo</span></a>
                     </li>                                        
+                    @yield('sidebar')
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>
@@ -47,38 +50,16 @@
                     <!-- END TOGGLE NAVIGATION -->                    
                 </ul>
                 <!-- END X-NAVIGATION VERTICAL -->                     
-                
-                <!-- START BREADCRUMB -->
-                <ul class="breadcrumb">
-                    <li><a href="#">Link</a></li>                    
-                    <li class="active">Active</li>
-                </ul>
-                <!-- END BREADCRUMB -->                
-                
-                <div class="page-title">                    
-                    <h2><span class="fa fa-arrow-circle-o-left"></span> Page Title</h2>
-                </div>                   
-                
-                <!-- PAGE CONTENT WRAPPER -->
-                <div class="page-content-wrap">
-                
-                    <div class="row">
-                        <div class="col-md-12">
+                            <!-- Espacio para los mensajes flash enviados entre solicitudes -->
+                    @if(Session::has('flash_message'))
+                        <article class="alert alert-info">
+                            <p align="center"> <strong>{{ Session::get('flash_message') }}</strong> </p>
+                        </article>
+                    @endif
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Panel Title</h3>
-                                </div>
-                                <div class="panel-body">
-                                    Panel body
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
                 
-                </div>
-                <!-- END PAGE CONTENT WRAPPER -->                
+                @yield('content')
+                
             </div>            
             <!-- END PAGE CONTENT -->
         </div>
@@ -122,7 +103,8 @@
 
         <!-- START TEMPLATE -->
         <script type="text/javascript" src="{{asset('js/plugins.js')}}"></script>        
-        <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>        
+        <script type="text/javascript" src="{{asset('js/actions.js')}}"></script>    
+        @yield('scriptsTemplate')    
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->         
     </body>
