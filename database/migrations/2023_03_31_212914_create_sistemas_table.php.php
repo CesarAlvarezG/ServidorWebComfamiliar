@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('Nombre',66);
             $table->float('latitud',8,8)->nullable();
             $table->float('longitud',8,8)->nullable();
+            $table->string('TokenSeguridad',20)->nullable();
         });
     }
 

@@ -19,7 +19,9 @@ return new class extends Migration
             $table->float('Humedad',8,8)->nullable();
             $table->float('IntensidadSonido',8,8)->nullable();
             $table->float('ParticulasGas',8,8)->nullable();
+            $table->integer('sistema_id')->unsigned()->nullable();
             $table->timestamps();
+            $table->foreign('sistema_id')->references('id')->on('sistemas');
         });
     }
 
@@ -28,6 +30,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('sistemas',function (Blueprint $table)
+        {
+            $table->dropForeingn(['sistema_id']);
+        });
         Schema::dropIfExists('valores');
     }
 };
