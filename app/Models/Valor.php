@@ -15,5 +15,5 @@ class Valor extends Model
         'IntensidadSonido',
         'ParticulasGas'
     ];
-
+    protected $hidden = ['created_at','updated_at'];
 }

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('valores',function(Blueprint $table)
+        Schema::create('valors',function(Blueprint $table)
         {
             $table->increments('id');
             $table->float('PM25',8,8)->nullable();
@@ -34,6 +34,6 @@ return new class extends Migration
         {
             $table->dropForeingn(['sistema_id']);
         });
-        Schema::dropIfExists('valores');
+        Schema::dropIfExists('valors');
     }
 };
