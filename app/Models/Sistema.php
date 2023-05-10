@@ -14,4 +14,5 @@ class Sistema extends Model
         'longitud'
     ];
     protected $hidden = ['TokenSeguridad','created_at','updated_at'];
+     
 }
